@@ -1,0 +1,19 @@
+{
+  "kind": "collectionType",
+  "collectionName": "status_orders",
+  "info": {
+    "singularName": "status-order",
+    "pluralName": "status-orders",
+    "displayName": "statusOrder"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
