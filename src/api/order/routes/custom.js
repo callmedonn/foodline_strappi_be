@@ -12,5 +12,11 @@ module.exports = {
       handler: "order.getMe",
       config: {},
     },
+    {
+      method: "POST",
+      path: "/order/deleteMany",
+      handler: "order.deleteMany",
+      config: {},
+    },
   ],
 };

@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "upload_orders",
+  "info": {
+    "singularName": "upload-order",
+    "pluralName": "upload-orders",
+    "displayName": "UploadOrder"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
+    }
+  }
+}

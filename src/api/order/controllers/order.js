@@ -59,4 +59,22 @@ module.exports = createCoreController("api::order.order", ({ Strapi }) => ({
       return ctx.badRequest(500, [{ messages: [{ id: err.message }] }]);
     }
   },
+  async deleteMany(ctx) {
+    let orderItems;
+    try {
+      orderItems = await strapi
+        .query("api::cart.cart")
+        .findMany({ where: { email: ctx.request.body.email } });
+
+      for (const order of orderItems) {
+        await strapi
+          .query("api::cart.cart")
+          .delete({ where: { id: order.id } });
+      }
+
+      return orderItems;
+    } catch (e) {
+      console.error(e);
+    }
+  },
 }));
